@@ -1,9 +1,9 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { Component, ReactElement, ReactNode } from 'react'
 import { Provider } from 'react-redux'
 import { wrapper } from '@/store'
 import { NextPage } from 'next'
-import { Component, ReactElement, ReactNode } from 'react'
+import type { AppProps } from 'next/app'
+import '@/styles/globals.css'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode

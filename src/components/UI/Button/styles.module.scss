@@ -1,0 +1,200 @@
+@import "src/constants/variables";
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  gap: 11px;
+  border: none;
+  border-radius: 4px;
+  font-weight: $font-semiBold;
+  cursor: pointer;
+}
+
+.full {
+  width: 100%;
+}
+
+.big {
+  font-size: $font-size-s;
+  line-height: 24px;
+  padding: 16px 32px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.social {
+  max-width: 133px;
+  width: 100%;
+  padding: 20px 14px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .social {
+    padding: 14px;
+  }
+}
+
+.large {
+  font-size: $font-size-s;
+  line-height: 24px;
+  padding: 12px 24px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.medium {
+  font-size: $font-size-s;
+  line-height: 16px;
+  padding: 12px 16px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.small {
+  font-size: $font-size-xs;
+  line-height: 16px;
+  padding: 8px 16px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.primary {
+  background: $blueViolet;
+  color: $white;
+
+  &:hover {
+    background: $persian-blue;
+  }
+
+  &:active {
+    background: $ultramarine;
+  }
+
+  &:focus {
+    outline: 1px solid $persian-indigo;
+  }
+
+  &[disabled] {
+    color: $silver;
+    background: $whiteSmoke;
+  }
+}
+
+.secondary {
+  background: $magnolia-light;
+  color: $blueViolet;
+
+  &:hover {
+    background: $magnolia;
+  }
+
+  &:active {
+    background: $lavender-blue;
+  }
+
+  &:focus {
+    outline: 1px solid $blueViolet;
+  }
+
+  &[disabled] {
+    color: $silver;
+    background: $whiteSmoke;
+  }
+}
+
+.outlined {
+  background: $white;
+  outline: 1px solid $whisper;
+
+  &:hover {
+    background: $whiteBeige;
+    outline: none;
+  }
+
+  &:focus {
+    background: $whiteBeige;
+  }
+
+  &:active {
+    background: $whiteSmokeLight;
+  }
+
+  &[disabled] {
+    color: $silver;
+    background: $white;
+    outline: 1px solid $whiteSmoke;
+  }
+}
+
+.tertiary {
+  color: $blueViolet;
+  background: $white;
+  outline: 1px solid $blueViolet;
+
+  &:hover {
+    color: $persian-blue;
+    outline: 1px solid $persian-blue;
+  }
+
+  &:focus {
+    color: $persian-indigo;
+    outline: 1px solid $persian-indigo;
+  }
+
+  &:active {
+    color: $ultramarine;
+    outline: 1px solid $ultramarine;
+  }
+
+  &[disabled] {
+    color: $silver;
+    background: $white;
+    outline: 1px solid $whiteSmoke;
+  }
+}
+
+.text {
+  color: $blueViolet;
+  background: $white;
+
+  &:hover {
+    color: $persian-blue;
+  }
+
+  &:focus {
+    color: $persian-indigo;
+  }
+
+  &:active {
+    color: $ultramarine;
+  }
+
+  &[disabled] {
+    color: $silver;
+    background: $white;
+  }
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}

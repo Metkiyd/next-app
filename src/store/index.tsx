@@ -1,15 +1,27 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { createWrapper } from 'next-redux-wrapper';
+import { configureStore, Action, ThunkAction } from '@reduxjs/toolkit'
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import { createWrapper } from 'next-redux-wrapper'
+import { UserReducer } from '@/store/slices/userSlice'
 
-const makeStore = () => configureStore({
+const makeStore = () =>
+  configureStore({
     reducer: {
-        // users: usersReducer,
+      user: UserReducer,
     },
-})
+    devTools: true,
+  })
+export const wrapper = createWrapper(makeStore)
+// export const store = makeStore()
 
-export const wrapper = createWrapper(makeStore);
-
-// Infer the `RootState` and `AppDispatch` types from the store itself
-// export type RootState = ReturnType<typeof makeStore.getState>
-// Inferred type: {users: UsersState}
-// export type AppDispatch = typeof makeStore.dispatch
+// export type AppDispatch = typeof store.dispatch
+// export type RootState = ReturnType<typeof store.getState>
+//
+// export type AppThunk<ReturnType = void> = ThunkAction<
+//   ReturnType,
+//   RootState,
+//   unknown,
+//   Action<string>
+// >
+//
+// export const useAppDispatch: () => AppDispatch = useDispatch
+// export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector

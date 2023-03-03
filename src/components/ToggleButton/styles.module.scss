@@ -1,0 +1,84 @@
+@import 'src/constants/variables';
+
+.container {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  background-color: $whiteBeige;
+  border-radius: 41px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn {
+  border: none;
+  display: inline-block;
+  font-weight: $font-semiBold;
+  font-size: $font-size-s;
+  line-height: 24px;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
+  transition: color 0.7s;
+}
+
+input[type="radio"].toggle {
+  display: none;
+
+  & + label{
+    cursor: pointer;
+    min-width: 60px;
+
+    &:after{
+      background: $blueViolet;
+      content: "";
+      height: 100%;
+      position: absolute;
+      border-radius: 41px;
+      top: 0;
+      transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &.toggleLeft + label {
+    border-right: 0;
+
+    &:after{
+      left: 100%
+    }
+  }
+
+  &.toggleRight + label{
+    &:after{
+      left: -100%;
+    }
+  }
+
+  &:checked + label {
+    cursor: default;
+    color: $white;
+    transition: color 0.7s ease-in-out;
+
+    &:after{
+      left: 0;
+    }
+  }
+
+  &:checked + label {
+    &:after{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    width: 50%;
+  }
+}

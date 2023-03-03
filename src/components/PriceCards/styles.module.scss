@@ -1,0 +1,150 @@
+@import "src/constants/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  height: 460px;
+  padding: 24px;
+  border-radius: 8px;
+  cursor: default;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 24px 64px -16px $cardShadow;
+  }
+}
+
+.active {
+  background: #583BE8;
+
+  .title {
+    color: $white;
+  }
+
+  .price {
+    color: $white;
+  }
+
+  .month {
+    color: $white;
+  }
+
+  .tariff {
+    border-bottom: 1px solid $mediumSlateBlue;
+  }
+
+  .advantages {
+    &__item {
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+
+    &__text {
+      color: $white;
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.promo {
+  padding: 8px;
+  width: max-content;
+  height: max-content;
+  border: none;
+  border-radius: 4px;
+  font-weight: $font-semiBold;
+  font-size: $font-size-xs;
+  line-height: 16px;
+  color: $white;
+}
+
+.pop {
+  background-color: $mediumSlateBlue;
+}
+
+.sale {
+  background-color: $amaranth;
+}
+
+.tariff {
+  border-bottom: 1px solid $whiteSmoke;
+}
+
+.title {
+  color: $blackRussian;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 8px;
+}
+
+.value {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: $blackRussian;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.month {
+  color: $gre43;
+  font-weight: $font-medium;
+  font-size: $font-size-m;
+  line-height: 48px;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 32px 0;
+
+  &__item {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    color: $gre43;
+    font-weight: $font-medium;
+    font-size: $font-size-s;
+    line-height: 20px;
+  }
+}
+
+.storybook {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-flow: wrap;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 314px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
