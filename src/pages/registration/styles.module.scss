@@ -1,0 +1,91 @@
+@import "../../assets/core/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 433px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 56px;
+
+  &__title {
+    font-weight: $font-semiBold;
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: $grey;
+  font-weight: $font-normal;
+  font-size: $font-size-s;
+  line-height: 16px;
+  margin-top: 24px;
+
+  &__action {
+    color: $blueViolet;
+    font-weight: $font-normal;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 393px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 442px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 416px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 327px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+
+    &__title {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  .inputs {
+    margin-bottom: 32px;
+  }
+}
